@@ -1,0 +1,166 @@
+
+.pricing__title{
+    
+    /** Typography **/
+    font-family: 'Source Code Pro', monospace;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+
+    /** Box Model **/
+    margin-bottom: 1rem;
+
+}
+
+
+.pricing__box {
+
+    /** Typography **/
+    color: white;
+
+    /** Box Model **/
+    border-radius: 8px;
+    padding: 2rem;
+    margin-top: 1rem;
+
+    /** Background **/
+    background-color: black;
+
+}
+
+.pricing__box--0margin{
+    margin: 0;
+}
+
+.pricing__box__title {
+    /** Typography **/
+    font-size: 1.125rem;
+}
+
+.pricing__box__description1{
+
+    /** Typography **/
+    font-family: 'Source Code Pro', monospace;
+    font-size: 0.75rem;
+
+    /** Box Model **/
+    margin-bottom: 2.5rem;
+}
+
+.pricing__box__description2 {
+
+    /** Typography **/
+    font-family: 'Source Code Pro', monospace;
+    font-size: 0.75rem;
+    color: #ccc;
+
+    /** Box Model **/
+    margin-bottom: 1rem;
+}
+
+.pricing__btn{
+    font-size: 0.75rem;
+}
+
+
+
+
+/* MOBILE FIRST PRE-DEFINED MEDIA QUERIES */
+/* xs */
+@media (min-width: 475px) {
+    .pricing__title {
+        font-size: 0.875rem;
+    }
+
+    .pricing__box__title{
+        font-size: 1.25rem;
+    }
+
+    .pricing__box__description1,
+    .pricing__box__description2 {
+        font-size: 0.875rem;
+    }
+
+    .pricing__btn {
+        font-size: 0.875rem;
+    }
+}
+
+/* sm */
+/* @media (min-width: 640px) {} */
+
+/* md */
+/* @media (min-width: 768px) {} */
+
+/* lg */
+@media (min-width: 1024px) {
+
+    /* The Screen is large enough to make introduce a grid layout */
+    .pricing__grid-container {
+        display: grid;
+        grid-template-areas: 
+        'css css css jsc'
+        'rea rea nex nex';
+        gap: 0.5rem;
+    }
+
+    /* Remove the margins used to add gaps in the base styling and uses the flexbox instead */
+    .pricing__box {
+        /** Box Model **/
+        margin: 0;
+
+        /** Layout **/
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 2.5rem;
+
+    }
+
+    /* This is used to specify the area that each pricing box will take  */
+    .pricing__box--css {
+        grid-area: css;
+    }
+
+    .pricing__box--js {
+        grid-area: jsc;
+    }
+
+    .pricing__box--react {
+        grid-area: rea;
+    }
+
+    .pricing__box--next {
+        grid-area: nex;
+    }
+
+    .pricing__box__description1{
+        margin: 0;
+    }
+
+    
+}
+
+/* xl */
+@media (min-width: 1280px) {
+    .pricing__title {
+        font-size: 1rem;
+    }
+
+    .pricing__box__title{
+        font-size: 1.5rem;
+    }
+
+    .pricing__box__description1,
+    .pricing__box__description2 {
+        font-size: 1rem;
+    }
+
+    .pricing__btn {
+        font-size: 1rem;
+    }
+}
+
+/* 2xl */
+/* @media (min-width: 1536px) {} */
+
